@@ -5,6 +5,16 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
+//download cv
+function downloadCV() {
+  const link = document.createElement('a');
+  link.href = './assets/CV.pdf';
+  link.download = 'My-CV.pdf'; // Optional: You can specify a custom filename here
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
 //text slider fn
 document.addEventListener("DOMContentLoaded", () => {
   const roles = ["Nodejs Developer", "Web Developer", "Tech Enthusiast"];
