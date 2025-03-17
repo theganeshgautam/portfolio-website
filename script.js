@@ -8,7 +8,7 @@ function toggleMenu() {
 //download cv
 function downloadCV() {
   const link = document.createElement('a');
-  link.href = './assets/CV.pdf';
+  link.href = './assets/Ganesh_CV.pdf';
   link.download = "Ganesh_CV.pdf"; // Optional: You can specify a custom filename here
   document.body.appendChild(link);
   link.click();
