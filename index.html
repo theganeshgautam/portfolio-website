@@ -1,430 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ganesh's Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ganesh Raj Gautam | Node.js Backend Developer</title>
+<meta name="description" content="Ganesh Raj Gautam is a Computer Engineering graduate and Node.js backend developer building secure REST APIs, and training in AWS and DevOps.">
+<meta property="og:title" content="Ganesh Raj Gautam | Node.js Backend Developer">
+<meta property="og:description" content="Node.js, Express, MongoDB, JWT auth, Socket.IO. Now training in AWS and DevOps. See projects and download my CV.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./assets/Ps-gscale.png">
+<meta name="theme-color" content="#0f1b2d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Ganesh Raj Gautam","jobTitle":"Node.js Backend Developer","email":"theganeshgautam@gmail.com","telephone":"+977-9866011101","alumniOf":"Pokhara University","sameAs":["https://www.linkedin.com/in/ganesh-raj-gautam/","https://github.com/theganeshgautam/"]}
+</script>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#hero">Ganesh Raj Gautam</a>
+  <div style="display:flex;gap:.6rem;align-items:center">
+   <ul class="links" id="links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+   </ul>
+   <button class="icon-btn" id="theme" aria-label="Toggle dark mode">◐</button>
+   <button class="icon-btn" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+ </div>
+</header>
 
-    <!-- NAVBAR ------------------------------------------------------------------->
-    <nav id="desktop-nav">
-      <div class="logo">Ganesh Gautam</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Ganesh Gautam</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
+<main id="main">
+<section id="hero">
+ <div class="wrap hero">
+  <div>
+   <div class="status"><span class="dot"></span>Open to internship and junior roles</div>
+   <h1>Ganesh Raj Gautam</h1>
+   <p class="role"><span id="typed"></span><span class="caret" aria-hidden="true">|</span></p>
+   <p class="pitch">I build secure, data-driven web applications using React, Node.js, and both SQL/NoSQL databases. Currently integrating AWS, Docker, and automated CI/CD pipelines to take full-stack projects from local development to production-ready deployments.</p>
+   <div class="cta">
+    <a class="btn p" href="./assets/CV.pdf" download="Ganesh_CV.pdf">Download CV</a>
+    <a class="btn s" href="#projects">View projects</a>
+    <a class="btn s" href="#contact">Hire me</a>
+   </div>
+   <div class="socials">
+    <a href="https://github.com/theganeshgautam/" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/ganesh-raj-gautam/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:theganeshgautam@gmail.com">Email</a>
+   </div>
+  </div>
+  <div class="api" aria-label="Summary of Ganesh as an API response">
+   <div class="api-bar"><span>GET /developers/ganesh</span><b>200 OK</b></div>
+<pre>{
+  <span class="k">"name"</span>: <span class="s">"Ganesh Raj Gautam"</span>,
+  <span class="k">"role"</span>: <span class="s">"Full-Stack Developer"</span>,
+  <span class="k">"degree"</span>: <span class="s">"B.E. Computer Eng."</span>,
+  <span class="k">"stack"</span>: [<span class="s">"React.js"</span>,<span class="s">"Node.js"</span>, <span class="s">"Express"</span>,
+            <span class="s">"MongoDB"</span>, <span class="s">"PostgreSQL"</span>],
+  <span class="k">"learning"</span>: [<span class="s">"AWS"</span>, <span class="s">"Docker"</span>,
+               <span class="s">"Kubernetes"</span>],
+  <span class="k">"available"</span>: <span class="n">true</span>,
+  <span class="k">"contact"</span>: <span class="s">"theganeshgautam@gmail.com"</span>
+}</pre>
+  </div>
+ </div>
+</section>
 
-    <!-- PROFILE SECTION ----------------------------------------------------------->
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/Ps-gscale.png" alt="Ganesh Gautam profile picture" style="width:110%; height:110%;" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Ganesh Raj Gautam</h1>
-        <!-- <p class="section__text__p2 text-slider">Nodejs Developer</p> -->
-        <p class="section__text__p2 text-slider">
-          <span id="typed-text"></span><span class="caret">|</span>
-        </p>
-        
+<section id="about">
+ <div class="wrap">
+  <h2>About me</h2>
+  <p class="lead">Backend-focused, curious, and ready to contribute from day one.</p>
+  <div class="about">
+   <img class="photo" src="./assets/Ps gs square.png" alt="Portrait of Ganesh Raj Gautam" onerror="this.outerHTML='<div class=&quot;photo&quot; role=&quot;img&quot; aria-label=&quot;Ganesh initials&quot;>GG</div>'">
+   <div>
+    <p>I'm a Computer Engineering graduate who enjoys designing clean, secure APIs and modelling data. My projects cover authentication, rate limiting, background jobs, real-time messaging and analytics.</p>
+    <p>I'm now extending that foundation into cloud and DevOps, so I can build services and also deploy, containerise and monitor them. I'm looking for a team where I can ship production code and learn from experienced engineers.</p>
+    <div class="tl">
+     <div><h3>Bachelor of Computer Engineering</h3><p>Pokhara University, Pokhara · 2019 to 2024</p></div>
+     <div><h3>School Leaving Certificate</h3><p>SOS Hermann Gmeiner School Gandaki, Pokhara · 2017 to 2019</p></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
 
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="downloadCV()"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/ganesh-raj-gautam/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/theganeshgautam/'"
-          />
-        </div>
-      </div>
-    </section>
+<section id="experience" style="background:var(--surface);border-block:1px solid var(--line)">
+ <div class="wrap">
+  <h2>Experience</h2>
+  <p class="lead">Current hands-on training in cloud and DevOps.</p>
+  <div class="exp">
+   <article class="card" style="background:var(--bg)">
+    <div class="top"><h3>AWS &amp; DevOps Training</h3><span class="when">July 2026 to Present</span></div>
+    <p class="org">AMCNSS IT Academy</p>
+    <ul class="pts">
+     <li>Currently enrolled in a training program covering Linux, GitHub, AWS Cloud Services, Terraform, Docker, Kubernetes, Jenkins, Ansible, Grafana, Prometheus and Python.</li>
+     <li>Building practical knowledge of cloud infrastructure, containerization, Infrastructure as Code (IaC), CI/CD workflows and system monitoring.</li>
+    </ul>
+    <ul class="chips"><li>Linux</li><li>AWS</li><li>Terraform</li><li>Docker</li><li>Kubernetes</li><li>Jenkins</li><li>Ansible</li><li>Grafana</li><li>Prometheus</li><li>Python</li></ul>
+   </article>
+  </div>
+ </div>
+</section>
 
-    <!-- ABOUT SECTION ---------------------------------------------------------->
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container" id="about-sec-cntner">
-        <div class="section__pic-container">
-          <img
-            src="./assets/Ps gs square.png"
-            alt="Profile picture"
-            class="about-pic"
-            id="sq-about-pic"
-            
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <div class="image-container">
-                <img
-                  src="./assets/sos.jpg"
-                  class="hover-zoom"
-                  alt="School image"
-                  style="width: 300px;"
-                />
-              </div>
-              <h3>Education</h3>
-              <p>Higher Secondary<br />SOS HGS Gandaki(2017-2019)</p>
-            </div>
-            <div class="details-container">
-              <div class="image-container">
-                <img
-                  src="./assets/college.jpg"
-                  class="hover-zoom"
-                  alt="College image"
-                  style="width: 300px;"
-                />
-              </div>
-              <h3>Education</h3>
-              <p>Bachelors in Computer Engineering<br />Pokhara University(2019-2024)</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p class="about-me-text">
-              Hello! I'm Ganesh Raj Gautam, a recent Computer Engineering graduate with a strong passion for backend development and creating impactful solutions. Skilled in Node.js, Express, and API integration, I enjoy tackling real-world challenges and building robust applications. My academic journey and hands-on projects have equipped me with a solid technical foundation, and I’m eager to grow, learn, and contribute meaningfully to the ever-evolving field of technology.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
+<section id="projects">
+ <div class="wrap">
+  <h2>Projects</h2>
+  <p class="lead">Selected work. Each one has its source code and a live demo.</p>
+  <div class="projects" id="projectGrid"></div>
+ </div>
+</section>
 
-    <!-- EXPERIENCE SECTION ------------------------------------------------------>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Tailwind CSS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React.js</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node.js</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express.js</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Github</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Mongodb</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
+<section id="skills" style="background:var(--surface);border-block:1px solid var(--line)">
+ <div class="wrap">
+  <h2>Technical skills</h2>
+  <p class="lead">Languages, frameworks and tools I use day to day.</p>
+  <div class="skills" id="skillGrid"></div>
+ </div>
+</section>
 
-    <!-- PROJECTS SECTION ------------------------------------------------------->
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/chatappp.jpeg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Chat App</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://https://github.com/theganeshgautam/ChatApp', '_blank')"
-              >
-                Github
-              </button>
-              <!-- <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://https://chatapp-h7xt.onrender.com/', '_blank')"
-              >
-                Live Demo
-              </button> -->
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/nutrition tracker.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Nutrition Tracker</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/theganeshgautam/Nutrition-Tracker', '_blank')"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/foodBUDDY.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">foodBUDDY</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/theganeshgautam/foodBUDDY', '_blank')"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
+<section id="contact">
+ <div class="wrap">
+  <h2>Let's talk</h2>
+  <p class="lead">I reply to recruiters and hiring managers within a day or two.</p>
+  <div class="contact">
+   <ul class="clist">
+    <li><span>Email</span><a href="mailto:theganeshgautam@gmail.com">theganeshgautam@gmail.com</a></li>
+    <li><span>Phone</span><a href="tel:+9779866011101">+977-9866011101</a></li>
+    <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/ganesh-raj-gautam/" target="_blank" rel="noopener">ganesh-raj-gautam</a></li>
+    <li><span>GitHub</span><a href="https://github.com/theganeshgautam/" target="_blank" rel="noopener">theganeshgautam</a></li>
+    <li><span>Instagram</span><a href="https://www.instagram.com/theganeshgautam/" target="_blank" rel="noopener">theganeshgautam</a></li>
+    <li><a class="btn p" href="./assets/Ganesh_CV.pdf" download="Ganesh_CV.pdf">Download CV</a></li>
+   </ul>
+   <div class="card">
+    <form id="form">
+     <label for="n">Your name</label><input id="n" required autocomplete="name">
+     <label for="e">Your email</label><input id="e" type="email" required autocomplete="email">
+     <label for="m">Message</label><textarea id="m" required></textarea>
+     <button class="btn p" type="submit">Send message</button>
+     <p class="note">This opens your email app with the message filled in.</p>
+    </form>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
 
-    <!-- CONTACT SECTION ----------------------------------------------------------->
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:theganeshgautam@gmail.com">theganeshgautam@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/ganesh-raj-gautam/" target="_blank">ganesh-raj-gautam</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/github.png"
-            alt="Github icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.github.com/theganeshgautam/" target="_blank">theganeshgautam</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/instagram.png"
-            alt="Instagram icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.instagram.com/theganeshgautam/" target="_blank">theganeshgautam</a></p>
-        </div>
-      </div>
-    </section>
+<footer>
+ <div class="wrap">
+  <span>© <span id="yr">2026</span> Ganesh Raj Gautam</span>
+  <a href="#hero">Back to top</a>
+ </div>
+</footer>
 
-    <!-- FOOTER ------------------------------------------------------------------>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>2025 Ganesh Raj Gautam</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+<script src="./js/script.js"></script>
+</body>
 </html>
