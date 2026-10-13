@@ -42,6 +42,15 @@ const PROJECTS = [
     github: "https://github.com/theganeshgautam/foodBUDDY",
     demo: "",
   },
+  {
+    name: "E-commerce website",
+    img: "./assets/e-commerce.jpeg",
+    desc: "E-commerce website where users can login, add items to cart and checkout.",
+    tags: ["React.js"],
+    github: "https://github.com/theganeshgautam/e-commerce-practice",
+    demo: "https://e-commerce-practice-self.vercel.app/",
+  },
+
 ];
 const esc = (t) =>
   String(t).replace(
