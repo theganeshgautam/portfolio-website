@@ -2,7 +2,7 @@
 const PROJECTS = [
   {
     name: "URL Shortener Service",
-    img: "./assets/url-shortener.png",
+    // img: "./assets/url-shortener.png",
     desc: "Scalable URL shortening backend with JWT auth, rate limiting and click analytics.",
     tags: ["Node.js", "Express", "MongoDB", "JWT"],
     github:
@@ -11,7 +11,7 @@ const PROJECTS = [
   },
   {
     name: "Subscription Management API",
-    img: "./assets/subscription-api.png",
+    // img: "./assets/subscription-api.png",
     desc: "Production-ready REST API with role-based access, bcrypt hashing and automated email reminders.",
     tags: ["Node.js", "Express", "Mongoose", "RBAC"],
     github:
@@ -20,7 +20,7 @@ const PROJECTS = [
   },
   {
     name: "Real-Time Chat App",
-    img: "./assets/chatappp.jpeg",
+    // img: "./assets/chatappp.jpeg",
     desc: "Socket.IO messaging with live user tracking, JWT auth and Cloudinary media storage.",
     tags: ["Socket.IO", "Node.js", "MongoDB", "Cloudinary"],
     github: "https://github.com/theganeshgautam/ChatApp",
@@ -28,7 +28,7 @@ const PROJECTS = [
   },
   {
     name: "Nutrition Tracker",
-    img: "./assets/nutrition tracker.png",
+    // img: "./assets/nutrition tracker.png",
     desc: "Log meals and track nutrients over time.",
     tags: ["Node.js", "Express", "PostgreSQL"],
     github: "https://github.com/theganeshgautam/Nutrition-Tracker",
@@ -36,7 +36,7 @@ const PROJECTS = [
   },
   {
     name: "foodBUDDY",
-    img: "./assets/foodBUDDY.png",
+    // img: "./assets/foodBUDDY.png",
     desc: "Food discovery app with a React front end calling a Node.js API.",
     tags: ["React", "Node.js", "MongoDB"],
     github: "https://github.com/theganeshgautam/foodBUDDY",
@@ -44,7 +44,7 @@ const PROJECTS = [
   },
   {
     name: "E-commerce website",
-    img: "./assets/e-commerce.jpeg",
+    // img: "./assets/e-commerce.jpeg",
     desc: "E-commerce website where users can login, add items to cart and checkout.",
     tags: ["React.js"],
     github: "https://github.com/theganeshgautam/e-commerce-practice",
@@ -59,8 +59,11 @@ const esc = (t) =>
   );
 document.getElementById("projectGrid").innerHTML = PROJECTS.map(
   (p) => `
+
  <article class="card proj">
-  <div class="thumb"><div class="ph" aria-hidden="true">${esc(
+  
+<div class="thumb">
+  <div class="ph" aria-hidden="true">${esc(
     p.name
       .split(" ")
       .map((w) => w[0])
@@ -68,7 +71,13 @@ document.getElementById("projectGrid").innerHTML = PROJECTS.map(
       .slice(0, 2)
       .toUpperCase(),
   )}</div>
-   <img src="${esc(p.img)}" alt="${esc(p.name)} screenshot" loading="lazy" onerror="this.remove()"></div>
+  ${
+    p.img
+      ? `<img src="${esc(p.img)}" alt="${esc(p.name)} screenshot" loading="lazy" onerror="this.remove()">`
+      : ""
+  }
+</div>
+
   <div class="proj-b">
    <h3>${esc(p.name)}</h3>
    <p>${esc(p.desc)}</p>
